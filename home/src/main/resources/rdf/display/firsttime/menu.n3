@@ -20,7 +20,8 @@ display:DefaultMenu
     display:hasElement display:OrganizationsMenuItem ;
     display:hasElement display:PeopleMenuItem ;
     display:hasElement display:ResearchMenuItem ;
-    display:hasElement display:CapabilityMapMenuItem .
+    display:hasElement display:CapabilityMapMenuItem ;
+    display:hasElement display:ARKMenuItem .
 
 #### Menu Items for Default Menu ####
 
@@ -59,6 +60,27 @@ display:CapabilityMapMenuItem
     display:menuPosition 6;
     display:linkText "Capability Map";
     display:toPage display:CapabilityMap .
+
+################################################
+# Add Pages
+################################################
+
+display:ARKMenuItem
+    a display:NavigationElement ;
+    display:menuPosition 7;
+    display:linkText "ARK";
+    display:toPage display:ARK .
+
+display:ARK
+    a display:Page ;
+    a display:ClassGroupPage;
+    display:forClassGroup vivoweb:vitroClassGrouppublications ;
+    display:title "ARK" ;
+    display:urlMapping "/ark" ;
+    display:requiresBodyTemplate  "ARK.ftl" .
+    #display:hasDataGetter display:researchDataGetter .
+
+################################################
 
 display:Home
     a display:HomePage ;
