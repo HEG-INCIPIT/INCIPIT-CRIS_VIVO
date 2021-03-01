@@ -27,5 +27,6 @@
     <owl:Ontology rdf:about="http://purl.org/vocab/vann/"/>
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ro.owl"/>
     <owl:Ontology rdf:about="http://www.ebi.ac.uk/efo/swo/"/>
+    <owl:Ontology rdf:about="http://www.test.ch/ontology/heg/"/>
 
 </rdf:RDF>

@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+
+<!--
+    Author : David Nogueiras Blanco
+    Last modification : 4 january 2021
+-->
+
+<rdf:RDF xmlns="http://www.test.ch/"
+     xml:base="http://www.test.ch/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#">
+    <owl:Ontology rdf:about="http://www.test.ch/ontology/heg/">
+        <rdfs:label xml:lang="en-US">The HEG Ontology</rdfs:label>
+        <vitro:ontologyPrefixAnnot xml:lang="en-US">heg</vitro:ontologyPrefixAnnot>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!--Person-->
+    <rdfs:Class rdf:about="http://www.test.ch/ontology/heg/Person" rdfs:label="Person" ns:term_status="testing">
+    <rdfs:comment>A person</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Person" />
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Research"/>
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Topic"/>
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Funding"/>
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Teaching"/>
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Paper"/>
+    </rdfs:Class>
+
+    <!--Employee-->
+    <rdfs:Class rdf:about="http://www.test.ch/ontology/heg/Employee" rdfs:label="Employee" ns:term_status="testing">
+    <rdfs:comment>A person who works at the HEG</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:subClassOf><owl:Class rdf:about="http://www.test.ch/ontology/heg/Person"/></rdfs:subClassOf>
+    </rdfs:Class>
+
+    <!--PER-->
+    <rdfs:Class rdf:about="http://www.test.ch/ontology/heg/PER" rdfs:label="PER" ns:term_status="testing">
+    <rdfs:comment>An employee attach to "Personnel d'Enseignement et de Recherche"</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:subClassOf><owl:Class rdf:about="http://www.test.ch/ontology/heg/Employee"/></rdfs:subClassOf>
+    </rdfs:Class>
+
+    <!--Research-->
+    <rdfs:Class rdf:about="http://www.test.ch/ontology/heg/Research" rdfs:label="Research" ns:term_status="testing">
+    <rdfs:comment>Projects of research</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Person"/>
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Topic"/>
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Funding"/>
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Teaching"/>
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Paper"/>
+    </rdfs:Class>
+
+    <!--Topic-->
+    <rdfs:Class rdf:about="http://www.test.ch/ontology/heg/Topic" rdfs:label="Topic" ns:term_status="testing">
+    <rdfs:comment>Topics of research or teaching</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Person"/>
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Funding"/>
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Research"/>
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Teaching"/>
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Paper"/>
+    </rdfs:Class>
+
+    <!--Funding-->
+    <rdfs:Class rdf:about="http://www.test.ch/ontology/heg/Funding" rdfs:label="Funding" ns:term_status="testing">
+    <rdfs:comment>Funds that are used in the prjects of research</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Person"/>
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Topic"/>
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Research"/>
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Teaching"/>
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Paper"/>
+    </rdfs:Class>
+
+    <!--Teaching-->
+    <rdfs:Class rdf:about="http://www.test.ch/ontology/heg/Teaching" rdfs:label="Teaching" ns:term_status="testing">
+    <rdfs:comment>Courses teached</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Person"/>
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Topic"/>
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Research"/>
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Funding"/>
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Paper"/>
+    </rdfs:Class>
+
+    <!--Paper-->
+    <rdfs:Class rdf:about="http://www.test.ch/ontology/heg/Paper" rdfs:label="Paper" ns:term_status="testing">
+    <rdfs:comment>Paper writed about a research</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:equivalentClass rdf:resource="http://purl.org/ontology/bibo/Article" />
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Person"/>
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Topic"/>
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Research"/>
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Funding"/>
+    <owl:disjointWith rdf:resource="http://www.test.ch/ontology/heg/Teaching"/>
+    </rdfs:Class>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+</rdf:RDF>
+
+
+
+
+

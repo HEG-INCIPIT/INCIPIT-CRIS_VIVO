@@ -1,0 +1,113 @@
+@prefix heg: <http://www.test.ch/ontology/heg/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix vitro:   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+
+<http://www.test.ch/ontology/heg/>
+      rdfs:label "The HEG Ontology"@en-US ;
+      vitro:ontologyPrefixAnnot "heg" .
+
+heg:Person
+    vitro:displayLimitAnnot
+        "5"^^xsd:int ;
+    vitro:displayRankAnnot
+        "50"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouppeople> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:publicDescriptionAnnot
+        "A person"^^xsd:string .
+
+heg:Employee
+    vitro:displayLimitAnnot
+        "5"^^xsd:int ;
+    vitro:displayRankAnnot
+        "50"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouppeople> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:publicDescriptionAnnot
+        "A person who works at the HEG"^^xsd:string .
+
+heg:PER
+    vitro:displayLimitAnnot
+        "5"^^xsd:int ;
+    vitro:displayRankAnnot
+        "50"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouppeople> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:publicDescriptionAnnot
+        "An employee attach to Personnel d'Enseignement et de Recherche"^^xsd:string .
+
+heg:Paper
+    vitro:displayLimitAnnot
+        "5"^^xsd:int ;
+    vitro:displayRankAnnot
+        "50"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouppublications> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:publicDescriptionAnnot
+        "Paper writed about a research"^^xsd:string .
+
+heg:Teaching
+    vitro:displayLimitAnnot
+        "5"^^xsd:int ;
+    vitro:displayRankAnnot
+        "50"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGroupteaching> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:publicDescriptionAnnot
+        "Courses teached"^^xsd:string .
+
+heg:Research
+    vitro:displayLimitAnnot
+        "5"^^xsd:int ;
+    vitro:displayRankAnnot
+        "50"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGroupresearch> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:publicDescriptionAnnot
+        "Projects of research"^^xsd:string .
+
+heg:Topic
+    vitro:displayLimitAnnot
+        "5"^^xsd:int ;
+    vitro:displayRankAnnot
+        "50"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouptopics> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:publicDescriptionAnnot
+        "Topics of research or teaching"^^xsd:string .
