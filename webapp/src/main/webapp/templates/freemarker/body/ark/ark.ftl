@@ -10,5 +10,7 @@ document.getElementById("demo").innerHTML = "Mes supers ARKs";
 //-->
 </script>
 
+Hello ${name}
+
 </body>
 </html>
